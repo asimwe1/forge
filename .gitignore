@@ -1,0 +1,15 @@
+# Ignore everything by default
+*
+
+# Keep the .gitignore file itself
+!.gitignore
+
+# Keep the icon
+!icon.png
+
+# Keep the forge directory
+!forge/
+!forge/**
+
+# (Optional) Keep README if you add one later
+#!README.md
