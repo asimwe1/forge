@@ -4,6 +4,10 @@
 # Keep the .gitignore file itself
 !.gitignore
 
+# Keep CI for the parent submodule pointer
+!.github/
+!.github/**
+
 # Keep the icon
 !icon.png
 

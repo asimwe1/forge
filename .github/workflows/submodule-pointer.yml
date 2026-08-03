@@ -1,0 +1,25 @@
+name: Submodule pointer
+
+# Parent repo (asimwe1/forge) only tracks the forge-mobile submodule SHA.
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  check:
+    name: Verify forge submodule
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with submodule
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Confirm forge-mobile checkout
+        run: |
+          test -f forge/package.json
+          test -f forge/app.json
+          echo "forge-mobile SHA: $(git -C forge rev-parse --short HEAD)"
+          echo "forge-mobile version: $(node -p "require('./forge/package.json').version")"
