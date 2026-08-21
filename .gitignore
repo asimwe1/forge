@@ -4,6 +4,10 @@
 # Keep the .gitignore file itself
 !.gitignore
 
+# Keep Cursor project rules
+!.cursor/
+!.cursor/**
+
 # Keep CI for the parent submodule pointer
 !.github/
 !.github/**
@@ -14,6 +18,14 @@
 # Keep the forge directory
 !forge/
 !forge/**
+
+# Keep the public Forge landing page
+!forge-landing/
+!forge-landing/**
+
+# Keep the Supabase backend boundary
+!forge-backend/
+!forge-backend/**
 
 # (Optional) Keep README if you add one later
 #!README.md
