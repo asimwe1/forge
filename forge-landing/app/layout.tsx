@@ -3,9 +3,13 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Forge — Train with intent',
-  description: 'Forge turns each training session into a clearer next step.',
+  description: 'Know what to lift next. Personalized gym training that adapts from your real sessions.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
