@@ -1,3 +1,9 @@
 [submodule "forge"]
 	path = forge
 	url = git@github.com:asimwe1/forge-mobile.git
+[submodule "forge-backend"]
+	path = forge-backend
+	url = git@github.com:asimwe1/forge-backend.git
+[submodule "forge-landing"]
+	path = forge-landing
+	url = git@github.com:asimwe1/forge-landing.git
