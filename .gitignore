@@ -27,5 +27,9 @@
 !forge-backend/
 !forge-backend/**
 
+# Keep the the forge mobile app
+!forge-mobile/
+!forge-mobile/**
+
 # (Optional) Keep README if you add one later
 #!README.md
