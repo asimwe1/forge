@@ -1,12 +1,10 @@
 name: Submodule pointer
-
-# Parent repo (asimwe1/forge) only tracks the forge-mobile submodule SHA.
+# Parent repo (asimwe1/forge) tracks forge-backend, forge-landing, forge-mobile submodule SHAs.
 on:
   push:
     branches: [master, main]
   pull_request:
     branches: [master, main]
-
 jobs:
   check:
     name: Verify forge submodule
@@ -16,10 +14,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-
+          token: ${{ secrets.SUBMODULES_TOKEN }}
       - name: Confirm forge-mobile checkout
         run: |
-          test -f forge/package.json
-          test -f forge/app.json
-          echo "forge-mobile SHA: $(git -C forge rev-parse --short HEAD)"
-          echo "forge-mobile version: $(node -p "require('./forge/package.json').version")"
+          test -f forge-mobile/package.json
+          test -f forge-mobile/app.json
+          echo "forge-mobile SHA: $(git -C forge-mobile rev-parse --short HEAD)"
+          echo "forge-mobile version: $(node -p "require('./forge-mobile/package.json').version")"
